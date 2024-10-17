@@ -17,6 +17,17 @@ public class Main {
         String[] cornerValues = Methods.cornerValuesArray(names);
         System.out.println("Shortest name: " + cornerValues[0]);
         System.out.println("Longest name: " + cornerValues[1]);
+
+        // Вызов метода cornerValuesArray для чисел
+
+        int[] cornerInts = Methods.cornerValuesArray(10, 23, -5, 76, 0);
+        System.out.println("Min number: " + cornerInts[0]);
+        System.out.println("Max number: " + cornerInts[1]);
+
+        char[] cornerChars = Methods.cornerValuesArray('a', 'z', 'A', 'Z');
+        System.out.println("Min char: " + cornerChars[0]);
+        System.out.println("Max char: " + cornerChars[1]);
+
     }
 }
 
