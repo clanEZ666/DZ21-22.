@@ -107,8 +107,35 @@ public class Methods {
         return new char[]{min, max};
     }
 
+    /**
+     * Метод для нахождения факториала числа с использованием рекурсии.
+     *
+     * @param x целое число, для которого нужно вычислить факториал
+     * @return факториал числа x
+     */
+    public static int factorial(int x) {
+        if (x < 0) {
+            throw new IllegalArgumentException("Факториал не определен для отрицательных чисел.");
+        }
+        if (x == 0 || x == 1) {
+            return 1;  // Базовый случай: факториал 0 и 1 равен 1
+        }
+        return x * factorial(x - 1);  // Рекурсивный вызов
+    }
+
+    // Метод для имитации переполнения стека (StackOverflowError), если базовый случай не определен.
+    public static int faultyFactorial(int x) {
+        if (x < 0) {
+            throw new IllegalArgumentException("Factorial is not defined for negative numbers.");
+        }
+        // Базовый случай отсутствует! Это вызовет бесконечную рекурсию и переполнение стека
+        return x * faultyFactorial(x - 1);
+
+    }
+
 
 }
+
 
 
 

@@ -24,10 +24,20 @@ public class Main {
         System.out.println("Min number: " + cornerInts[0]);
         System.out.println("Max number: " + cornerInts[1]);
 
+        // Вызов метода для символов
         char[] cornerChars = Methods.cornerValuesArray('a', 'z', 'A', 'Z');
         System.out.println("Min char: " + cornerChars[0]);
         System.out.println("Max char: " + cornerChars[1]);
 
+        // Проверка метода для пустого массива
+        String[] emptyArray = {};
+        String[] emptyCorners = Methods.cornerValuesArray(emptyArray);
+        System.out.println("Shortest name (empty): " + emptyCorners[0]);
+        System.out.println("Longest name (empty): " + emptyCorners[1]);
+
+        // Проверка метода factorial
+        System.out.println("Factorial of 10: " + Methods.factorial(10));
+        System.out.println("Factorial of 0: " + Methods.factorial(0));
     }
 }
 
